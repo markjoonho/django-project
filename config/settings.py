@@ -20,7 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ""
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,7 +39,14 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
+    "books.apps.BooksConfig",
+    "categories.apps.CategoriesConfig",
+    "favs.apps.FavsConfig",
+    "movies.apps.MoviesConfig",
+    "people.apps.PeopleConfig",
+    "reviews.apps.ReviewsConfig",
     "users.apps.UsersConfig",
+    "core.apps.CoreConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
